@@ -3,10 +3,11 @@
   <groupId>ch.swingfx</groupId>
   <artifactId>twinkle</artifactId>
   <versioning>
-    <release>1.0.0</release>
+    <release>1.0.1</release>
     <versions>
       <version>1.0.0</version>
+      <version>1.0.1</version>
     </versions>
-    <lastUpdated>20131009024427</lastUpdated>
+    <lastUpdated>20141021012352</lastUpdated>
   </versioning>
 </metadata>
