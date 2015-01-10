@@ -1,0 +1,6 @@
+<archetype>
+	<groupId>com.savoirfairelinux.openstack.jmeter</groupId>
+	<artifactId>jmeter-openstack-archetype</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>maven-archetype</packaging>
+</archetype>
