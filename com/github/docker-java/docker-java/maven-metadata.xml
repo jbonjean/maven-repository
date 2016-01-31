@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.docker-java</groupId>
+  <artifactId>docker-java</artifactId>
+  <versioning>
+    <release>2.1.5-CUSTOM</release>
+    <versions>
+      <version>2.1.5-CUSTOM</version>
+    </versions>
+    <lastUpdated>20160131194555</lastUpdated>
+  </versioning>
+</metadata>
