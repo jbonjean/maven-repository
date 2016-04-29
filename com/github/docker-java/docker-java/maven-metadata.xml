@@ -3,10 +3,11 @@
   <groupId>com.github.docker-java</groupId>
   <artifactId>docker-java</artifactId>
   <versioning>
-    <release>2.1.5-CUSTOM</release>
+    <release>3.0.0-RC5-PATCHED</release>
     <versions>
       <version>2.1.5-CUSTOM</version>
+      <version>3.0.0-RC5-PATCHED</version>
     </versions>
-    <lastUpdated>20160131194555</lastUpdated>
+    <lastUpdated>20160429022225</lastUpdated>
   </versioning>
 </metadata>
