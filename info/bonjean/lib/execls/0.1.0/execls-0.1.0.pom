@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>info.bonjean.lib</groupId>
+	<artifactId>execls</artifactId>
+	<version>0.1.0</version>
+	<packaging>jar</packaging>
+	<name>execls</name>
+	<url>https://github.com/jbonjean/execls</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<executions>
+					<execution>
+						<id>native-compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>gcc</executable>
+							<arguments>
+								<argument>-s</argument>
+								<argument>-shared</argument>
+								<argument>-O3</argument>
+								<argument>-fPIC</argument>
+								<argument>-pedantic</argument>
+								<argument>-Wall</argument>
+								<argument>-I${java.home}/../include</argument>
+								<argument>-I${java.home}/../include/linux</argument>
+								<argument>-o</argument>
+								<argument>${project.build.outputDirectory}/libexecls.so</argument>
+								<argument>${project.basedir}/src/main/native/libexecls.c</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.0.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.0.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<version>1.0.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
